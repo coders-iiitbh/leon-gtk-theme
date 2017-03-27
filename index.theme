@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Leon
+Comment= Simple gui theme for gnome
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Leon
+MetacityTheme=Leon
+ButtonLayout=:minimize,maximize,close
