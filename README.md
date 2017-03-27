@@ -1,2 +1,2 @@
-# leon-gtk-theme
-This is a gtk theme
+This is a GTK Theme for minimalistic view of the GNOME
+
