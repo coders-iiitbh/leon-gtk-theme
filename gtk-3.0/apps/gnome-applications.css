@@ -1,0 +1,597 @@
+/**************
+ * Gnome-todo *
+ **************/
+window headerbar > box.horizontal > button.toggle.popup {
+  border-radius: 2px;
+  -gtk-outline-radius: 2px;
+  font-weight: 700; }
+window headerbar > box.horizontal > button:not(.image-button):not(.text-button):not(.toggle):not(.popup):not(.color):not(.titlebutton):not(.destructive-action):not(.suggested-action) {
+  min-width: 2.003rem;
+  padding-left: 0.50263rem;
+  padding-right: 0.50263rem; }
+window headerbar > box.horizontal > button.color:not(.destructive-action):not(.suggested-action) {
+  min-width: 2.003rem;
+  padding-left: 0.50263rem;
+  padding-right: 0.50263rem;
+  border-radius: 2px;
+  -gtk-outline-radius: 2px; }
+
+window > popover > stack > grid > button.text-button:not(.suggested-action) {
+  box-shadow: none;
+  background-color: transparent;
+  background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0)); }
+  window > popover > stack > grid > button.text-button:not(.suggested-action):hover {
+    box-shadow: none;
+    background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.1)); }
+  window > popover > stack > grid > button.text-button:not(.suggested-action):active {
+    box-shadow: none;
+    animation: flat_ripple_effect 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+  window > popover > stack > grid > button.text-button:not(.suggested-action):disabled {
+    box-shadow: none;
+    background-color: transparent; }
+  window > popover > stack > grid > button.text-button:not(.suggested-action):checked {
+    background-color: alpha(currentColor, 0.2);
+    color: #ECEFF1; }
+  window > popover > stack > grid > button.text-button:not(.suggested-action):checked:disabled > label {
+    color: inherit; }
+
+
+
+
+
+/*****************
+ * Gnome-weather *
+ *****************/
+window stack > frame > frame > grid.horizontal > grid.horizontal .linked.osd.stack-switcher {
+  background-color: rgba(42, 55, 62, 0.9);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16); }
+  window stack > frame > frame > grid.horizontal > grid.horizontal .linked.osd.stack-switcher > button.radio.text-button, window stack > frame > frame > grid.horizontal > grid.horizontal .linked.osd.stack-switcher > button.radio.text-button:hover {
+    border-image: none; }
+  window stack > frame > frame > grid.horizontal > grid.horizontal .linked.osd.stack-switcher > button.radio.text-button:checked {
+    border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#00BCD4), to(transparent)) 0 0 2/0 0 2px; }
+window stack > frame > frame > grid.horizontal > grid.horizontal button.osd {
+  min-width: 0.99775rem;
+  min-height: 0.99775rem;
+  padding: 0.99775rem;
+  border-radius: 100px;
+  -gtk-outline-radius: 100px;
+  background-color: rgba(42, 55, 62, 0.9); }
+window stack > frame > frame > grid.horizontal > grid.horizontal stack > scrolledwindow undershoot.top, window stack > frame > frame > grid.horizontal > grid.horizontal stack > placessidebar undershoot.top, window stack > frame > frame > grid.horizontal > grid.horizontal stack > scrolledwindow undershoot.bottom, window stack > frame > frame > grid.horizontal > grid.horizontal stack > placessidebar undershoot.bottom, window stack > frame > frame > grid.horizontal > grid.horizontal stack > scrolledwindow undershoot.left, window stack > frame > frame > grid.horizontal > grid.horizontal stack > placessidebar undershoot.left, window stack > frame > frame > grid.horizontal > grid.horizontal stack > scrolledwindow undershoot.right, window stack > frame > frame > grid.horizontal > grid.horizontal stack > placessidebar undershoot.right {
+  background-image: none; }
+
+window stack > frame > frame > grid.horizontal #weekly-forecast-frame {
+  background: transparent;
+  background-image: linear-gradient(to bottom, rgba(42, 55, 62, 0.9)); }
+
+
+
+
+
+
+  /******************
+ * Gnome-Terminal *
+ ******************/
+terminal-window menubar > menuitem {
+  color: rgba(236, 239, 241, 0.75);
+  background-color: transparent; }
+  terminal-window menubar > menuitem:hover {
+    color: #ECEFF1;
+    box-shadow: inset 0 -2px #00BCD4; }
+  terminal-window menubar > menuitem:disabled {
+    color: rgba(236, 239, 241, 0.3);
+    box-shadow: none; }
+
+
+/**************
+ * Gnome-Logs *
+ **************/
+headerbar > button.flat.popup.title-menu-button.toggle, headerbar > button.popup.title-menu-button.toggle.osd.image-button,
+headerbar > .popup.title-menu-button.toggle.button.osd.image-button, .titlebar headerbar > button.popup.title-menu-button.toggle:not(.suggested-action):not(.destructive-action),
+headerbar > button.popup.title-menu-button.toggle:not(.suggested-action):not(.destructive-action), headerbar.menu > arrow.popup.title-menu-button.toggle,
+headerbar.context-menu > arrow.popup.title-menu-button.toggle, placessidebar row headerbar > button.popup.title-menu-button.toggle.image-button, .csd headerbar > button.popup.title-menu-button.toggle.titlebutton, .csd headerbar.selection-mode headerbar > button.popup.title-menu-button.toggle.titlebutton,
+.csd .titlebar headerbar > button.popup.title-menu-button.toggle.titlebutton, #gf-candidate-popup headerbar > button.popup.title-menu-button.toggle, window > grid.vertical > box.vertical > widget headerbar > button.popup.title-menu-button.toggle, layouttabbar headerbar > button.popup.title-menu-button.toggle, layouttab headerbar > button.popup.title-menu-button.toggle {
+  border-radius: 2px;
+  -gtk-outline-radius: 2px; }
+  headerbar > button.flat.popup.title-menu-button.toggle > grid .title, headerbar > button.popup.title-menu-button.toggle.osd.image-button > grid .title,
+  headerbar > .popup.title-menu-button.toggle.button.osd.image-button > grid .title,
+  headerbar > button.popup.title-menu-button.toggle:not(.suggested-action):not(.destructive-action) > grid .title, headerbar.menu > arrow.popup.title-menu-button.toggle > grid .title,
+  headerbar.context-menu > arrow.popup.title-menu-button.toggle > grid .title, placessidebar row headerbar > button.popup.title-menu-button.toggle.image-button > grid .title, .csd headerbar > button.popup.title-menu-button.toggle.titlebutton > grid .title, .csd headerbar.selection-mode headerbar > button.popup.title-menu-button.toggle.titlebutton > grid .title, #gf-candidate-popup headerbar > button.popup.title-menu-button.toggle > grid .title, window > grid.vertical > box.vertical > widget headerbar > button.popup.title-menu-button.toggle > grid .title, layouttabbar headerbar > button.popup.title-menu-button.toggle > grid .title, layouttab headerbar > button.popup.title-menu-button.toggle > grid .title,
+  headerbar > button.flat.popup.title-menu-button.toggle > grid .subtitle,
+  headerbar > button.popup.title-menu-button.toggle.osd.image-button > grid .subtitle,
+  headerbar > .popup.title-menu-button.toggle.button.osd.image-button > grid .subtitle,
+  headerbar > button.popup.title-menu-button.toggle:not(.suggested-action):not(.destructive-action) > grid .subtitle,
+  headerbar.menu > arrow.popup.title-menu-button.toggle > grid .subtitle,
+  headerbar.context-menu > arrow.popup.title-menu-button.toggle > grid .subtitle,
+  placessidebar row headerbar > button.popup.title-menu-button.toggle.image-button > grid .subtitle,
+  .csd headerbar > button.popup.title-menu-button.toggle.titlebutton > grid .subtitle,
+  .csd headerbar.selection-mode headerbar > button.popup.title-menu-button.toggle.titlebutton > grid .subtitle,
+  #gf-candidate-popup headerbar > button.popup.title-menu-button.toggle > grid .subtitle,
+  window > grid.vertical > box.vertical > widget headerbar > button.popup.title-menu-button.toggle > grid .subtitle,
+  layouttabbar headerbar > button.popup.title-menu-button.toggle > grid .subtitle,
+  layouttab headerbar > button.popup.title-menu-button.toggle > grid .subtitle {
+    padding: 0.09752rem 0.99775rem 0.09752rem;
+    font-size: 90%; }
+
+
+
+/***************
+ * Gnome-music *
+ ***************/
+GdMainView:dir(ltr),
+.side-panel:dir(ltr) {
+  border-right: 1px solid rgba(0, 0, 0, 0.11); }
+GdMainView:dir(rtl),
+.side-panel:dir(rtl) {
+  border-left: 1px solid rgba(0, 0, 0, 0.11); }
+GdMainView .view, GdMainView iconview,
+.side-panel .view,
+.side-panel iconview {
+  background-color: #3b4c54;
+  box-shadow: none; }
+  GdMainView .view, GdMainView iconview, GdMainView .view row.activatable, GdMainView iconview row.activatable, GdMainView .view .view, GdMainView iconview .view, GdMainView .view iconview, GdMainView iconview iconview,
+  GdMainView .view text,
+  GdMainView iconview .view text,
+  .view GdMainView iconview text,
+  GdMainView .view iconview text,
+  iconview GdMainView .view text,
+  GdMainView iconview text,
+  GdMainView .view textview text,
+  textview GdMainView .view text,
+  GdMainView iconview textview text,
+  textview GdMainView iconview text, GdMainView treeview.view header button, GdMainView iconview treeview.view header button, treeview.view header GdMainView iconview button, GdMainView .view .tweak-category header button, .tweak-category header GdMainView .view button, GdMainView iconview .tweak-category header button, .tweak-category header GdMainView iconview button,
+  .side-panel .view,
+  .side-panel iconview,
+  .side-panel .view row.activatable,
+  .side-panel iconview row.activatable,
+  .side-panel .view .view,
+  .side-panel iconview .view,
+  .side-panel .view iconview,
+  .side-panel iconview iconview,
+  .side-panel .view text,
+  .side-panel iconview .view text,
+  .view .side-panel iconview text,
+  .side-panel .view iconview text,
+  iconview .side-panel .view text,
+  .side-panel iconview text,
+  .side-panel .view textview text,
+  textview .side-panel .view text,
+  .side-panel iconview textview text,
+  textview .side-panel iconview text,
+  .side-panel treeview.view header button,
+  .side-panel iconview treeview.view header button,
+  treeview.view header .side-panel iconview button,
+  .side-panel .view .tweak-category header button,
+  .tweak-category header .side-panel .view button,
+  .side-panel iconview .tweak-category header button,
+  .tweak-category header .side-panel iconview button {
+    padding: 0;
+    background-color: transparent;
+    color: rgba(236, 239, 241, 0.75);
+    font-weight: 500;
+    box-shadow: none; }
+    GdMainView .view:hover, GdMainView iconview:hover, GdMainView .view row.activatable:hover, GdMainView iconview row.activatable:hover, GdMainView .view .view:hover, GdMainView iconview .view:hover, GdMainView .view iconview:hover, GdMainView iconview iconview:hover,
+    GdMainView .view text:hover,
+    GdMainView iconview .view text:hover,
+    .view GdMainView iconview text:hover,
+    GdMainView .view iconview text:hover,
+    iconview GdMainView .view text:hover,
+    GdMainView iconview text:hover,
+    GdMainView .view textview text:hover,
+    textview GdMainView .view text:hover,
+    GdMainView iconview textview text:hover,
+    textview GdMainView iconview text:hover, GdMainView treeview.view header button:hover, GdMainView iconview treeview.view header button:hover, treeview.view header GdMainView iconview button:hover, GdMainView .view .tweak-category header button:hover, .tweak-category header GdMainView .view button:hover, GdMainView iconview .tweak-category header button:hover, .tweak-category header GdMainView iconview button:hover,
+    .side-panel .view:hover,
+    .side-panel iconview:hover,
+    .side-panel .view row.activatable:hover,
+    .side-panel iconview row.activatable:hover,
+    .side-panel .view .view:hover,
+    .side-panel iconview .view:hover,
+    .side-panel .view iconview:hover,
+    .side-panel iconview iconview:hover,
+    .side-panel .view text:hover,
+    .side-panel iconview .view text:hover,
+    .view .side-panel iconview text:hover,
+    .side-panel .view iconview text:hover,
+    iconview .side-panel .view text:hover,
+    .side-panel iconview text:hover,
+    .side-panel .view textview text:hover,
+    textview .side-panel .view text:hover,
+    .side-panel iconview textview text:hover,
+    textview .side-panel iconview text:hover,
+    .side-panel treeview.view header button:hover,
+    .side-panel iconview treeview.view header button:hover,
+    treeview.view header .side-panel iconview button:hover,
+    .side-panel .view .tweak-category header button:hover,
+    .tweak-category header .side-panel .view button:hover,
+    .side-panel iconview .tweak-category header button:hover,
+    .tweak-category header .side-panel iconview button:hover {
+      color: #ECEFF1; }
+
+actionbar {
+  box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.03), inset 0 3px 4px -3px rgba(0, 0, 0, 0.06); }
+  actionbar, actionbar.frame {
+    background-color: #3b4c54; }
+  actionbar button,
+  actionbar .linked > button.image-button {
+    border-radius: 100px;
+    -gtk-outline-radius: 100px;
+    border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.001, to(alpha(currentColor, 0.2)), to(transparent)) 0 0 0/0 0 0px;
+    color: rgba(236, 239, 241, 0.75); }
+    actionbar button:hover,
+    actionbar .linked > button.image-button:hover {
+      border-image: none;
+      color: #ECEFF1; }
+    actionbar button:checked,
+    actionbar .linked > button.image-button:checked {
+      border-image: -gtk-gradient(radial, center bottom, 0, center bottom, 0.5, to(#00BCD4), to(transparent)) 0 0 2/0 0 2px;
+      background-color: transparent;
+      color: #ECEFF1; }
+      actionbar button:checked:disabled,
+      actionbar .linked > button.image-button:checked:disabled {
+        border-image: none;
+        background-color: transparent;
+        color: rgba(236, 239, 241, 0.3); }
+    actionbar button:disabled,
+    actionbar .linked > button.image-button:disabled {
+      border-image: none;
+      background-color: transparent;
+      color: rgba(236, 239, 241, 0.225); }
+
+
+
+/*********
+ * Gedit *
+ *********/
+GeditViewFrame .gedit-search-slider {
+  padding: 3px;
+  border-radius: 2px;
+  border-width: 9px;
+  border-image: -gtk-scaled(url("assets/osd-shadow-dark.png"), url("assets/osd-shadow-dark@2.png")) 10/10px stretch;
+  color: #ECEFF1;
+  opacity: 0.9; }
+  GeditViewFrame .gedit-search-slider entry, GeditViewFrame .gedit-search-slider spinbutton:not(.vertical), GeditViewFrame .gedit-search-slider entry.error, GeditViewFrame .gedit-search-slider spinbutton.error:not(.vertical), GeditViewFrame .gedit-search-slider entry.warning, GeditViewFrame .gedit-search-slider spinbutton.warning:not(.vertical),
+  GeditViewFrame .gedit-search-slider .linked > entry,
+  GeditViewFrame .gedit-search-slider .linked > spinbutton:not(.vertical),
+  GeditViewFrame .gedit-search-slider .linked > entry.error,
+  GeditViewFrame .gedit-search-slider .linked > spinbutton.error:not(.vertical),
+  GeditViewFrame .gedit-search-slider .linked > entry.warning,
+  GeditViewFrame .gedit-search-slider .linked > spinbutton.warning:not(.vertical) {
+    color: #ECEFF1; }
+    GeditViewFrame .gedit-search-slider entry:focus, GeditViewFrame .gedit-search-slider spinbutton:focus:not(.vertical), GeditViewFrame .gedit-search-slider entry.error:focus, GeditViewFrame .gedit-search-slider spinbutton.error:focus:not(.vertical), GeditViewFrame .gedit-search-slider entry.warning:focus, GeditViewFrame .gedit-search-slider spinbutton.warning:focus:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry:focus,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton:focus:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry.error:focus,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton.error:focus:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry.warning:focus,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton.warning:focus:not(.vertical) {
+      color: #FFFFFF; }
+    GeditViewFrame .gedit-search-slider entry:disabled, GeditViewFrame .gedit-search-slider spinbutton:disabled:not(.vertical), GeditViewFrame .gedit-search-slider entry.error:disabled, GeditViewFrame .gedit-search-slider spinbutton.error:disabled:not(.vertical), GeditViewFrame .gedit-search-slider entry.warning:disabled, GeditViewFrame .gedit-search-slider spinbutton.warning:disabled:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry:disabled,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton:disabled:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry.error:disabled,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton.error:disabled:not(.vertical),
+    GeditViewFrame .gedit-search-slider .linked > entry.warning:disabled,
+    GeditViewFrame .gedit-search-slider .linked > spinbutton.warning:disabled:not(.vertical) {
+      color: rgba(236, 239, 241, 0.3); }
+
+paned.titlebar.horizontal headerbar button.flat.toggle.popup:not(.image-button), paned.titlebar.horizontal headerbar button.toggle.popup.osd.image-button:not(.image-button),
+paned.titlebar.horizontal headerbar .toggle.popup.button.osd.image-button:not(.image-button),
+paned.titlebar.horizontal headerbar button.toggle.popup:not(.image-button):not(.suggested-action):not(.destructive-action), paned.titlebar.horizontal headerbar .menu > arrow.toggle.popup:not(.image-button),
+paned.titlebar.horizontal headerbar .context-menu > arrow.toggle.popup:not(.image-button),
+paned.titlebar.horizontal headerbar menu > arrow.toggle.popup:not(.image-button), paned.titlebar.horizontal headerbar placessidebar row button.toggle.popup.image-button:not(.image-button), placessidebar row paned.titlebar.horizontal headerbar button.toggle.popup.image-button:not(.image-button), paned.titlebar.horizontal .csd headerbar button.toggle.popup.titlebutton:not(.image-button),
+.csd paned.titlebar.horizontal headerbar button.toggle.popup.titlebutton:not(.image-button),
+paned.titlebar.horizontal headerbar .csd .titlebar.selection-mode button.toggle.popup.titlebutton:not(.image-button), paned.titlebar.horizontal headerbar #gf-candidate-popup button.toggle.popup:not(.image-button), #gf-candidate-popup paned.titlebar.horizontal headerbar button.toggle.popup:not(.image-button), paned.titlebar.horizontal headerbar window > grid.vertical > box.vertical > widget button.toggle.popup:not(.image-button), window > grid.vertical > box.vertical > widget paned.titlebar.horizontal headerbar button.toggle.popup:not(.image-button), paned.titlebar.horizontal headerbar layouttabbar button.toggle.popup:not(.image-button), layouttabbar paned.titlebar.horizontal headerbar button.toggle.popup:not(.image-button), paned.titlebar.horizontal headerbar layouttab button.toggle.popup:not(.image-button), layouttab paned.titlebar.horizontal headerbar button.toggle.popup:not(.image-button) {
+  border-radius: 2px;
+  -gtk-outline-radius: 2px; }
+
+overlay > box.vertical > paned.horizontal > box.vertical statusbar {
+  padding: 0.20255rem;
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: rgba(0, 0, 0, 0.11);
+  background-color: #3b4c54;
+  box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.03), inset 0 3px 4px -3px rgba(0, 0, 0, 0.06); }
+
+notebook grid.horizontal > widget > box.horizontal > scrolledwindow undershoot.top, notebook grid.horizontal > widget > box.horizontal > placessidebar undershoot.top, notebook grid.horizontal > widget > box.horizontal > scrolledwindow undershoot.bottom, notebook grid.horizontal > widget > box.horizontal > placessidebar undershoot.bottom, notebook grid.horizontal > widget > box.horizontal > scrolledwindow undershoot.left, notebook grid.horizontal > widget > box.horizontal > placessidebar undershoot.left, notebook grid.horizontal > widget > box.horizontal > scrolledwindow undershoot.right, notebook grid.horizontal > widget > box.horizontal > placessidebar undershoot.right {
+  background-image: none; }
+
+
+
+/**************
+ * Calculator *
+ **************/
+window > grid.vertical > box.vertical > widget button {
+  min-width: 0.99775rem;
+  min-height: 0.99775rem;
+  padding: 0.75em 1em 0.75em;
+  border: 0.75em solid transparent;
+  border-radius: 2px;
+  font-weight: 700; }
+  window > grid.vertical > box.vertical > widget button.suggested-action {
+    color: transparent;
+    font-size: 0; }
+    window > grid.vertical > box.vertical > widget button.suggested-action {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.07);
+      background-color: #546E7A;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
+      color: rgba(236, 239, 241, 0.75);
+      border-style: none;
+      border-radius: 100px;
+      background-color: transparent;
+      background-image: -gtk-scaled(url("assets/equal-dark.png"), url("assets/equal-dark@2.png"));
+      background-size: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      transition-duration: 0.2s;
+      animation: none; }
+    window > grid.vertical > box.vertical > widget button.suggested-action:hover {
+      border-style: none;
+      border-radius: 100px;
+      background-color: transparent;
+      background-image: -gtk-scaled(url("assets/equal-hover-dark.png"), url("assets/equal-hover-dark@2.png"));
+      background-size: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      transition-duration: 0.2s;
+      animation: none; }
+    window > grid.vertical > box.vertical > widget button.suggested-action:active {
+      border-style: none;
+      border-radius: 100px;
+      background-color: transparent;
+      background-image: -gtk-scaled(url("assets/equal-active-dark.png"), url("assets/equal-active-dark@2.png"));
+      background-size: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      transition-duration: 0.2s;
+      animation: none; }
+    window > grid.vertical > box.vertical > widget button.suggested-action:disabled {
+      border-style: none;
+      border-radius: 100px;
+      background-color: transparent;
+      background-image: -gtk-scaled(url("assets/equal-insensitive-dark.png"), url("assets/equal-insensitive-dark@2.png"));
+      background-size: 32px;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      transition-duration: 0.2s;
+      animation: none; }
+
+
+/************
+ * Nautilus *
+ ************/
+.nautilus-desktop-window,
+.nautilus-desktop-window notebook,
+.nautilus-desktop-window notebook > stack {
+  background: transparent; }
+
+.nautilus-desktop.nautilus-canvas-item, .nemo-desktop.nemo-canvas-item {
+  color: #FFFFFF; }
+
+.nautilus-canvas-item {
+  border-radius: 2px; }
+
+.nautilus-circular-button {
+  border-radius: 100px;
+  -gtk-outline-radius: 100px; }
+
+.disk-space-display {
+  border: 0 none transparent; }
+  .disk-space-display.free {
+    background-color: alpha(currentColor, 0.2);
+    color: rgba(236, 239, 241, 0.3); }
+  .disk-space-display.used {
+    background-color: #00BCD4; }
+  .disk-space-display.unknown {
+    background-color: #FF9800; }
+
+/**************
+ * Tweak-tool *
+ **************/
+.tweak-categories {
+  background-color: #3b4c54;
+  color: rgba(236, 239, 241, 0.75); }
+  .tweak-categories:dir(ltr) {
+    box-shadow: inset -2px 2px 1px -2px rgba(0, 0, 0, 0.02), inset -3px 3px 3px -2px rgba(0, 0, 0, 0.06); }
+  .tweak-categories:dir(rtl) {
+    box-shadow: inset 2px 2px 1px -2px rgba(0, 0, 0, 0.02), inset 3px 3px 3px -2px rgba(0, 0, 0, 0.06); }
+  .tweak-categories separator,
+  .tweak-categories .separator {
+    min-height: 0;
+    border-color: transparent;
+    background-color: transparent;
+    color: transparent; }
+
+.tweak-category {
+  border: none;
+  color: rgba(236, 239, 241, 0.75);
+  background-color: transparent;
+  font-weight: 500; }
+  .tweak-category:hover {
+    color: #ECEFF1; }
+  .tweak-category:selected {
+    color: #00BCD4;
+    background-color: transparent; }
+    .tweak-category:selected label {
+      color: #00BCD4; }
+
+.tweak-group {
+  padding: 6px;
+  background-color: #455A64; }
+
+.tweak {
+  background-color: #455A64; }
+  .tweak:hover {
+    background-color: transparent; }
+
+.tweak-group-white,
+.tweak-white {
+  background-color: #455A64; }
+
+
+
+/***************
+ * Gnome panel *
+ ***************/
+panel-toplevel.background {
+  background-color: #13191c; }
+
+panel-plug,
+panel-toplevel > grid.horizontal > widget > widget {
+  color: rgba(236, 239, 241, 0.75);
+  background-color: #13191c;
+  box-shadow: none; }
+
+.gnome-panel-menu-bar,
+panel-applet > menubar,
+#clock-applet-button {
+  font-weight: 700;
+  color: rgba(236, 239, 241, 0.75);
+  background-color: transparent;
+  box-shadow: none; }
+  .gnome-panel-menu-bar label:backdrop, .gnome-panel-menu-bar:backdrop,
+  panel-applet > menubar label:backdrop,
+  panel-applet > menubar:backdrop,
+  #clock-applet-button label:backdrop,
+  #clock-applet-button:backdrop {
+    opacity: 1.0; }
+
+.gnome-panel-menu-bar,
+panel-applet menubar {
+  box-shadow: none; }
+  .gnome-panel-menu-bar menuitem,
+  panel-applet menubar menuitem {
+    color: rgba(236, 239, 241, 0.75);
+    background-color: transparent; }
+    .gnome-panel-menu-bar menuitem:hover,
+    panel-applet menubar menuitem:hover {
+      color: #ECEFF1;
+      box-shadow: inset 0 -2px #00BCD4; }
+    .gnome-panel-menu-bar menuitem:backdrop,
+    panel-applet menubar menuitem:backdrop {
+      opacity: 1.0; }
+  .gnome-panel-menu-bar menu,
+  panel-applet menubar menu {
+    font: regular; }
+    .gnome-panel-menu-bar menu menuitem,
+    panel-applet menubar menu menuitem {
+      color: rgba(236, 239, 241, 0.75);
+      background-color: #455A64; }
+      .gnome-panel-menu-bar menu menuitem:hover,
+      panel-applet menubar menu menuitem:hover {
+        color: #ECEFF1;
+        background-color: alpha(currentColor, 0.1);
+        box-shadow: none; }
+      .gnome-panel-menu-bar menu menuitem:backdrop,
+      panel-applet menubar menu menuitem:backdrop {
+        opacity: 1.0; }
+    .gnome-panel-menu-bar menu separator,
+    panel-applet menubar menu separator {
+      color: rgba(0, 0, 0, 0.11); }
+
+#tasklist-button,
+#clock-applet-button,
+#showdesktop-button {
+  padding: 0px 0.30008rem;
+  border: none;
+  border-radius: 0;
+  color: rgba(236, 239, 241, 0.75);
+  background-color: transparent;
+  font-weight: 700; }
+  #tasklist-button:hover,
+  #clock-applet-button:hover,
+  #showdesktop-button:hover {
+    color: #ECEFF1;
+    background-color: transparent;
+    box-shadow: inset 0 -2px alpha(currentColor, 0.2); }
+  #tasklist-button:checked, #tasklist-button:hover:checked, #tasklist-button:disabled:checked,
+  #clock-applet-button:checked,
+  #clock-applet-button:hover:checked,
+  #clock-applet-button:disabled:checked,
+  #showdesktop-button:checked,
+  #showdesktop-button:hover:checked,
+  #showdesktop-button:disabled:checked {
+    color: #ECEFF1;
+    background-color: transparent;
+    box-shadow: inset 0 -2px #00BCD4; }
+  #tasklist-button label:backdrop, #tasklist-button:backdrop,
+  #clock-applet-button label:backdrop,
+  #clock-applet-button:backdrop,
+  #showdesktop-button label:backdrop,
+  #showdesktop-button:backdrop {
+    opacity: 1.0; }
+
+widget > menubar {
+  background-color: #13191c;
+  box-shadow: none; }
+
+wnck-pager:selected {
+  box-shadow: inset 0 -2px #00BCD4; }
+wnck-pager:backdrop {
+  opacity: 1.0; }
+
+na-tray-applet {
+  -NaTrayApplet-icon-padding: 2;
+  -NaTrayApplet-icon-size: 16; }
+  na-tray-applet:backdrop {
+    opacity: 1.0; }
+
+gp-arrow-button {
+  min-width: 1.50038rem;
+  min-height: 0;
+  border: 1px solid transparent;
+  background-image: none;
+  color: rgba(236, 239, 241, 0.75);
+  margin: 0.15004rem; }
+  gp-arrow-button:hover, gp-arrow-button:active {
+    color: #ECEFF1; }
+
+sn-button {
+  padding: 0.30008rem; }
+
+
+
+/************
+ * Calendar *
+ ***********/
+calendar {
+  margin: 0.60015rem 0;
+  padding: 0.3976rem 0.09752rem 0.20255rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  color: #ECEFF1; }
+  calendar:selected {
+    border: none;
+    border-radius: 100px;
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: -gtk-scaled(url("assets/calendar-day-selected.png"), url("assets/calendar-day-selected@2.png"));
+    background-size: 1.44786rem 1.44786rem;
+    background-position: center top;
+    background-repeat: no-repeat; }
+  calendar.header {
+    border: 1px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.11);
+    border-radius: 0; }
+  calendar.button, calendar.header.button {
+    color: alpha(currentColor, 0.2);
+    background-color: transparent;
+    background-size: 2.43811rem 2.43811rem, auto; }
+    calendar.button:hover, calendar.header.button:hover {
+      box-shadow: none;
+      background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0.1)); }
+    calendar.button:active, calendar.header.button:active {
+      box-shadow: none;
+      animation: flat_ripple_effect 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+    calendar.button:disabled, calendar.header.button:disabled {
+      box-shadow: none;
+      background-color: transparent; }
+  calendar:indeterminate {
+    color: alpha(currentColor, 0.2); }
+  calendar.highlight {
+    color: alpha(currentColor, 0.55);
+    font-size: 90%;
+    font-weight: 500; }
+
