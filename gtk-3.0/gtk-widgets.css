@@ -339,7 +339,7 @@ stacksidebar .separator {
  *********************/
 decoration {
   transition: none;
-  border-radius: 2px 2px 0 0;
+  border-radius: 7px 7px 0 0;
   border-width: 0;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
   margin: 8px; }
