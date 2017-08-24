@@ -339,7 +339,7 @@ stacksidebar .separator {
  *********************/
 decoration {
   transition: none;
-  border-radius: 7px 7px 0 0;
+  border-radius: 2px 2px 0 0;
   border-width: 0;
   box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.16), 0 10px 6px rgba(0, 0, 0, 0.2);
   margin: 8px; }
@@ -387,6 +387,7 @@ decoration {
   padding: 0.75019rem;
   border-radius: 100px;
   -gtk-outline-radius: 100px; }
+  /*
   .csd headerbar button.titlebutton.close:hover:backdrop, .csd headerbar button.titlebutton.close:active:backdrop, .csd headerbar button.titlebutton.minimize:hover:backdrop, .csd headerbar button.titlebutton.minimize:active:backdrop, .csd headerbar button.titlebutton.maximize:hover:backdrop, .csd headerbar button.titlebutton.maximize:active:backdrop, .csd headerbar.selection-mode button.titlebutton.close:hover:backdrop, .csd headerbar.selection-mode button.titlebutton.close:active:backdrop, .csd headerbar.selection-mode button.titlebutton.minimize:hover:backdrop, .csd headerbar.selection-mode button.titlebutton.minimize:active:backdrop, .csd headerbar.selection-mode button.titlebutton.maximize:hover:backdrop, .csd headerbar.selection-mode button.titlebutton.maximize:active:backdrop,
   .csd .titlebar button.titlebutton.close:hover:backdrop,
   .csd .titlebar button.titlebutton.close:active:backdrop,
@@ -427,7 +428,7 @@ decoration {
     .csd .titlebar button.titlebutton.close:hover > image,
     .csd .titlebar.selection-mode button.titlebutton.close:hover > image {
       background-image: -gtk-scaled(url("assets/window-close-active.png"), url("assets/window-close-active@2.png")); }
-  .csd headerbar button.titlebutton.close:active, .csd headerbar.selection-mode button.titlebutton.close:active,
+  /*.csd headerbar button.titlebutton.close:active, .csd headerbar.selection-mode button.titlebutton.close:active,
   .csd .titlebar button.titlebutton.close:active,
   .csd .titlebar.selection-mode button.titlebutton.close:active {
     color: #FFFFFF;
@@ -887,10 +888,180 @@ treeview.view header .side-panel iconview button:selected,
     .side-panel iconview .tweak-category header button:backdrop:disabled:selected,
     .tweak-category header .side-panel iconview button:backdrop:disabled:selected {
       color: rgba(255, 255, 255, 0.4); }
-
+*/
 .monospace {
   font-family: Monospace; }
 
+
+
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton,
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton,
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 19px 19px;
+}
+
+/* Set correct layout with 
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <':minimize,maximize,close'>}" for
+     buttons on the right or
+    gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/DecorationLayout': <'close,maximize,minimize:'>}"
+    for buttons on the left */
+
+/* minimize */
+
+headerbar .right button.minimize.titlebutton,
+headerbar .right:dir(rtl) button.minimize.titlebutton,
+headerbar .left button.minimize.titlebutton,
+headerbar .left:dir(rtl) button.minimize.titlebutton {
+    background-image: url('window-controls/neutral.png');
+}
+
+headerbar .right button.minimize.titlebutton:hover,
+headerbar .right:dir(rtl) button.minimize.titlebutton:hover,
+headerbar .left button.minimize.titlebutton:hover,
+headerbar .left:dir(rtl) button.minimize.titlebutton:hover {
+    background-image: url('window-controls/button-min-focus.png');
+}
+
+headerbar .right button.minimize.titlebutton:checked,
+headerbar .right:dir(rtl) button.minimize.titlebutton:checked,
+headerbar .left button.minimize.titlebutton:checked,
+headerbar .left:dir(rtl) button.minimize.titlebutton:checked {
+    background-image: url('window-controls/neutral.png');
+}
+
+headerbar .right button.minimize.titlebutton:backdrop,
+headerbar .right:dir(rtl) button.minimize.titlebutton:backdrop,
+headerbar .left button.minimize.titlebutton:backdrop,
+headerbar .left:dir(rtl) button.minimize.titlebutton:backdrop {
+    background-image: url('window-controls/unfocus.png');
+}
+/*
+headerbar .right button.minimize.titlebutton:backdrop:hover,
+headerbar .right:dir(rtl) button.minimize.titlebutton:backdrop:hover,
+headerbar .left button.minimize.titlebutton:backdrop:hover,
+headerbar .left:dir(rtl) button.minimize.titlebutton:backdrop:hover {
+    background-image: url('window-controls/minimize_unfocused_prelight.png');
+}
+*/
+/* maximize */
+headerbar .right button.maximize.titlebutton,
+headerbar .right:dir(rtl) button.maximize.titlebutton,
+headerbar .left button.maximize.titlebutton,
+headerbar .left:dir(rtl) button.maximize.titlebutton {
+    background-image: url('window-controls/neutral.png');
+}
+
+headerbar .right button.maximize.titlebutton:hover,
+headerbar .right:dir(rtl) button.maximize.titlebutton:hover,
+headerbar .left button.maximize.titlebutton:hover,
+headerbar .left:dir(rtl) button.maximize.titlebutton:hover {
+    background-image: url('window-controls/button-max-focus.png');
+}
+
+headerbar .right button.maximize.titlebutton:checked,
+headerbar .right:dir(rtl) button.maximize.titlebutton:checked,
+headerbar .left button.maximize.titlebutton:checked,
+headerbar .left:dir(rtl) button.maximize.titlebutton:checked {
+    background-image: url('window-controls/neutral.png');
+}
+
+headerbar .right button.maximize.titlebutton:backdrop,
+headerbar .right:dir(rtl) button.maximize.titlebutton:backdrop,
+headerbar .left button.maximize.titlebutton:backdrop,
+headerbar .left:dir(rtl) button.maximize.titlebutton:backdrop {
+    background-image: url('window-controls/unfocus.png');
+}
+/*
+headerbar .right button.maximize.titlebutton:backdrop:hover,
+headerbar .right:dir(rtl) button.maximize.titlebutton:backdrop:hover,
+headerbar .left button.maximize.titlebutton:backdrop:hover,
+headerbar .left:dir(rtl) button.maximize.titlebutton:backdrop:hover {
+    background-image: url('window-controls/maximize_unfocused_prelight.png');
+}
+*/
+/* close */
+headerbar .right button.close.titlebutton,
+headerbar .right:dir(rtl) button.close.titlebutton,
+headerbar .left button.close.titlebutton,
+headerbar .left:dir(rtl) button.close.titlebutton {
+    background-image: url('window-controls/neutral.png');
+    padding: 2px 6px 3px 3px;
+}
+
+headerbar .right button.close.titlebutton:hover,
+headerbar .right:dir(rtl) button.close.titlebutton:hover,
+headerbar .left button.close.titlebutton:hover,
+headerbar .left:dir(rtl) button.close.titlebutton:hover {
+    background-image: url('window-controls/button-close-focus.png');
+}
+
+headerbar .right button.close.titlebutton:checked,
+headerbar .right:dir(rtl) button.close.titlebutton:checked,
+headerbar .left button.close.titlebutton:checked,
+headerbar .left:dir(rtl) button.close.titlebutton:checked {
+    background-image: url('window-controls/neutral.png');
+}
+
+headerbar .right button.close.titlebutton:backdrop,
+headerbar .right:dir(rtl) button.close.titlebutton:backdrop,
+headerbar .left button.close.titlebutton:backdrop,
+headerbar .left:dir(rtl) button.close.titlebutton:backdrop {
+    background-image: url('window-controls/unfocus.png');
+}
+/*
+headerbar .right button.close.titlebutton:backdrop:hover,
+headerbar .right:dir(rtl) button.close.titlebutton:backdrop:hover,
+headerbar .left button.close.titlebutton:backdrop:hover,
+headerbar .left:dir(rtl) button.close.titlebutton:backdrop:hover {
+    background-image: url('window-controls/close_unfocused_prelight.png');
+}
+*/
+
+.titlebar button.close.titlebutton {
+    /* fake request     to avoid usage of regular window-close button*/
+    -gtk-icon-style: requested;
+}
+
+/* Menu button when fallback kicks in (XFCE, Cinnamon etc.) */
+/*
+headerbar .button.popup.titlebutton {
+    background-image: url('window-controls/menu.png');
+}
+
+headerbar .button.popup.titlebutton:hover {
+    background-image: url('window-controls/menu_prelight.png');
+}
+
+headerbar .button.popup.titlebutton:active {
+    background-image: url('window-controls/menu.png');
+}
+*/
+
+headerbar button.close.titlebutton,
+headerbar button.minimize.titlebutton,
+headerbar button.maximize.titlebutton {
+    border-width: 0px;
+    border-image: none;
+    background-color: transparent;
+}
+
+headerbar button.close.titlebutton image,
+headerbar button.minimize.titlebutton image,
+headerbar button.maximize.titlebutton image {
+        color: transparent;
+}
 
 
 /********
@@ -2197,7 +2368,7 @@ switch {
   switch:disabled {
     color: rgba(236, 239, 241, 0.3); }
   switch:checked {
-    background-color: rgba(0, 188, 212, 0.2); }
+    background-color: rgba(0, 188, 212, 0.2); }//
     switch:checked:disabled {
       background-color: rgba(0, 188, 212, 0.2); }
   switch:disabled {
@@ -2205,15 +2376,15 @@ switch {
     background-color: alpha(currentColor, 0.2); }
   switch slider {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16), inset 0 1px rgba(255, 255, 255, 0.07);
-    background-color: #546E7A;
+    background-color: #546E7A;//
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
-    color: rgba(236, 239, 241, 0.75);
+    color: rgba(236, 239, 241, 0.75);//
     min-width: 1.50038rem;
     min-height: 1.50038rem;
     margin: -0.30008rem -0.07502rem;
     padding: 0;
     border-radius: 100px;
-    -gtk-outline-radius: 100px; }
+    -gtk-outline-radius: 100px; } 
   switch:hover slider {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 3px 4px rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.07);
     background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(alpha(currentColor, 0)), to(transparent)), linear-gradient(to bottom, alpha(currentColor, 0));
@@ -4058,13 +4229,12 @@ button:visited > label {
  * Base States *
  ***************/
 .background {
-  background-color: transparent;
+  background-color: @theme_bg_color;
   color: @theme_fg_color;
-  background-image: url("assets/base.png"); }
+  /*background-image: url("/home/drake/Pictures/1427911099560.png"); }*/
   .background:backdrop {
     color: @theme_fg_color;
-    background-color: transparent;
-    background-image: url("assets/base-unfocused.png"); 
+    /*background-image: url("assets/base-unfocused.png"); */
     text-shadow: none;
     -gtk-icon-shadow: none; }
 

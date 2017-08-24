@@ -122,7 +122,7 @@
 */
 
 
-@define-color theme_fg_color #ECEFF1;
+@define-color theme_fg_color #b9bebf;
 @define-color theme_inverted_fg_color #ECEFF1;
 @define-color theme_text_color #ECEFF1;
 @define-color theme_bg_color #3e515a;
